@@ -27,7 +27,7 @@ function Form() {
         const resp = await fetch(`https://youtube-mp3-download1.p.rapidapi.com/dl?id=${vedio_id}`, options);
         const data = await resp.json();
         setloading(false);
-        window.open(data.link, "_blank");
+        window.open(data.link, "_self");
         setlink("");
     }
     return (
